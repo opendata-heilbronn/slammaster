@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('slammaster App', () => {
+describe('svn App', () => {
   let page: AppPage;
 
   beforeEach(() => {
