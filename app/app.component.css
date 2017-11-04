@@ -1,0 +1,11 @@
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.cfhn-container {
+    display: flex;
+    height: calc(100vh - 40px);
+    width: 100vw;
+    overflow: auto;
+}

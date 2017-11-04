@@ -2,15 +2,12 @@
   "name": "svn",
   "version": "0.0.0",
   "license": "MIT",
-  "main": "main.js",
+  "main": "dist/main.js",
   "scripts": {
-    "ng": "ng",
-    "el": "electron .",
-    "start": "ng serve",
-    "build": "ng build --base-href dist/",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "build": "ng build --base-href '' && cp main.js dist/main.js",
+    "start": "electron .",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w"
   },
   "private": true,
   "dependencies": {
@@ -40,6 +37,7 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "~3.2.0",
+    "concurrently": "^3.5.0",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",
