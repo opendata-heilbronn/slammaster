@@ -4,10 +4,11 @@
   "license": "MIT",
   "main": "dist/main.js",
   "scripts": {
-    "build": "ng build --base-href '' && cp main.js dist/main.js && mkdir dist/projector && cp app/projector/* dist/projector/",
+    "build": "ng build --base-href '' && npm run copy:dist",
     "start": "electron .",
     "tsc": "tsc",
-    "tsc:w": "tsc -w"
+    "tsc:w": "tsc -w",
+    "copy:dist": "node build/copy-dist.js"
   },
   "private": true,
   "dependencies": {
@@ -38,6 +39,8 @@
     "@types/node": "~6.0.60",
     "codelyzer": "~3.2.0",
     "concurrently": "^3.5.0",
+    "copy": "^0.3.1",
+    "make-dir": "^1.1.0",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
     "typescript": "~2.3.3"
