@@ -5,10 +5,11 @@ import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import { RouterModule, Routes, Router, NavigationStart } from '@angular/router';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatIconModule, MatTableModule, MatToolbarModule, MatTooltipModule} from '@angular/material';
+import {MatSidenavModule, MatIconModule, MatTableModule, MatToolbarModule, MatTooltipModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PoetsComponent } from './poets/poets.component';
 
 const appRoutes: Routes = [
   { path: '',
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    PoetsComponent
   ],
   imports: [
     BrowserModule,

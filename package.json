@@ -4,7 +4,7 @@
   "license": "MIT",
   "main": "dist/main.js",
   "scripts": {
-    "build": "ng build --base-href '' && cp main.js dist/main.js",
+    "build": "ng build --base-href '' && cp main.js dist/main.js && mkdir dist/projector && cp app/projector/* dist/projector/",
     "start": "electron .",
     "tsc": "tsc",
     "tsc:w": "tsc -w"

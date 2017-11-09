@@ -1,9 +1,14 @@
 <mat-toolbar color="primary">
-    <mat-icon class="example-icon">menu</mat-icon>
+    <mat-icon class="example-icon" (click)="sidenav.open()">menu</mat-icon>
     <span class="example-spacer"></span>
 
-    <mat-icon matTooltip="Präsentation starten">fullscreen</mat-icon>
+    <mat-icon matTooltip="Präsentation starten" (click)="startFullscreen()">fullscreen</mat-icon>
 </mat-toolbar>
+
+
+<mat-sidenav #sidenav class="example-sidenav">
+    Jolly good!
+</mat-sidenav>
 
 
 

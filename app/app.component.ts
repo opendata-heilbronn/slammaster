@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+
+  projectorWindow = null;
+
+  startFullscreen () {
+    this.projectorWindow = window.open("projector/index.html");
+  }
 }
