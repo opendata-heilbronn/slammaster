@@ -1,17 +1,16 @@
-<mat-toolbar color="primary">
-    <mat-icon class="example-icon" (click)="sidenav.open()">menu</mat-icon>
-    <span class="example-spacer"></span>
+<mat-sidenav-container>
+	<mat-sidenav #sidenav class="example-sidenav">
+		<app-navigation></app-navigation>
+	</mat-sidenav>
+	<mat-toolbar color="primary" class="sticky-toolbar">
+		<mat-icon class="example-icon" (click)="sidenav.open()">menu</mat-icon>
+		<span class="example-spacer"></span>
 
-    <mat-icon matTooltip="Präsentation starten" (click)="startFullscreen()">fullscreen</mat-icon>
-</mat-toolbar>
-
-
-<mat-sidenav #sidenav class="example-sidenav">
-    Jolly good!
-</mat-sidenav>
-
+		<mat-icon matTooltip="Präsentation starten" (click)="startFullscreen()">fullscreen</mat-icon>
+	</mat-toolbar>
 
 
-<div class="cfhn-container">
-  <router-outlet></router-outlet>
-</div>
+	<div class="cfhn-container">
+		<router-outlet></router-outlet>
+	</div>
+</mat-sidenav-container>

@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const url = require('url');
 
@@ -10,7 +10,7 @@ app.on('ready', function () {
 
   // Initialize the window to our specified dimensions
   win = new BrowserWindow({ width: 1000, height: 600 });
-
+  win.setMenu(null);
   // Specify entry point
 
   console.info(process.env.PACKAGE);
@@ -37,10 +37,10 @@ app.on('activate', () => {
   if (win === null) {
     createWindow()
   }
-})
+});
 
 app.on('window-all-closed', function () {
-  if (process.platform != 'darwin') {
+  if (process.platform !== 'darwin') {
     app.quit();
   }
 });
