@@ -1,0 +1,23 @@
+
+<form class="cfhn-form">
+
+  <mat-form-field class="cfhn-full-width">
+    <input matInput placeholder="Name der Veranstaltung" value="">
+  </mat-form-field>
+
+  <mat-form-field class="cfhn-full-width">
+    <input matInput  placeholder="Primäre Farbe" [(colorPicker)]="primarycolor" [value]="primarycolor"/>
+    <mat-icon matSuffix [style.color]="primarycolor">lens</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field class="cfhn-full-width">
+    <input matInput  placeholder="Akzentfarbe" [(colorPicker)]="accentcolor" [value]="accentcolor"/>
+    <mat-icon matSuffix [style.color]="accentcolor">lens</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field class="cfhn-full-width">
+    <input matInput  placeholder="Hintergrundfarbe" [(colorPicker)]="backgroundcolor" [value]="backgroundcolor"/>
+    <mat-icon matSuffix [style.color]="backgroundcolor">lens</mat-icon>
+  </mat-form-field>
+
+</form>

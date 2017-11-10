@@ -1,0 +1,12 @@
+
+
+.cfhn-fileuploader {
+    border: solid 1px rgb(200, 200, 200);
+    height: 36px;
+}
+
+.cfhn-fileuploader input {
+    background: rgb(255, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+}
