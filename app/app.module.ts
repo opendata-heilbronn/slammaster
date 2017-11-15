@@ -1,63 +1,47 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { RouterModule, Routes, Router, NavigationStart } from '@angular/router';
+import {RouterModule, Routes, Router, NavigationStart} from '@angular/router'
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSidenavModule, MatIconModule, MatTableModule, MatToolbarModule, MatTooltipModule, MatInputModule } from '@angular/material';
-import {ColorPickerModule} from 'angular4-color-picker';
+import { AppRoutingModule } from './app-routing.module';
+
+import { 
+  MatSidenavModule, MatIconModule, MatTableModule, MatToolbarModule, MatTooltipModule, 
+  MatInputModule, MatListModule
+} from '@angular/material';
+
+// import {ColorPickerModule} from 'angular4-color-picker';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PoetsComponent } from './poets/poets.component';
 import { EventComponent } from './event/event.component';
+import { NavigationComponent } from './navigation/navigation.component'; 
 
-const appRoutes: Routes = [
-  {
-    path: '',
-    redirectTo: '/poets',
-    pathMatch: 'full'
-  },
-  {
-    path: 'dashboard',
-    component: DashboardComponent,
-    data: { title: 'Dashboard' }
-  },
-  {
-    path: 'event',
-    component: EventComponent,
-    data: { title: 'Veranstaltung' }
-  },
-  {
-    path: 'poets',
-    component: PoetsComponent,
-    data: { title: 'Poeten' }
-  }
-];
-
+import { PoetModel } from './poets/poet.model';
+import { PoetService } from './poets/poet.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     PoetsComponent,
-    EventComponent
+    EventComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatIconModule, MatTableModule, MatToolbarModule, MatTooltipModule, MatInputModule,
-    ColorPickerModule,
+    MatSidenavModule, MatIconModule, MatTableModule, MatToolbarModule, MatTooltipModule, 
+    MatInputModule, MatListModule,
+//    ColorPickerModule,
     HttpClientModule,
-    RouterModule.forRoot(
-      appRoutes,
-      {
-        enableTracing: false
-      }
-    )
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    PoetService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

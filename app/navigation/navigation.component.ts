@@ -14,8 +14,8 @@ export class NavigationComponent implements OnInit {
             text: 'Player'
         },
         {
-            link: '/events',
-            text: 'Veranstaltungen'
+            link: '/event',
+            text: 'Veranstaltung'
         },
         {
             link: '/groups',
