@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { PoetModel } from './poet.model';
 
 import {Subject} from 'rxjs/Subject';
-import {Observable} from 'rxjs/Observable';
+import {Observable} from 'rxjs/Rx';
 
 @Injectable()
 export class PoetService {
@@ -11,13 +11,7 @@ export class PoetService {
 
 
   Read(options:any) : Observable<PoetModel[]> {
-      var observable = new Subject<PoetModel[]>();
-
-      window.setTimeout(() => {
-        observable.next(this.sampleData);
-      }, 500);
-
-      return observable;
+      return Observable.of(this.sampleData);
   }
 
 
