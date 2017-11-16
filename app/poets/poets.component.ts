@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PoetModel } from './poet.model';
 import { PoetService } from './poet.service';
+import { DialogService } from './../dialog.service';
 
-declare var electron;
 
 @Component({
   selector: 'app-poets',
@@ -15,11 +15,10 @@ export class PoetsComponent implements OnInit {
   poets :PoetModel[];
 
   selectFile() {
-    let dialog = electron.remote.dialog;
-    dialog.showOpenDialog({properties: ['openFile', 'openDirectory', 'multiSelections']})
+    this.dialogService.showOpenDialog({properties: ['openFile', 'openDirectory', 'multiSelections']});
   }
 
-  constructor(private poetService :PoetService) { }
+  constructor(private poetService :PoetService, private dialogService :DialogService) { }
 
   ngOnInit() {
     this.poetService.Read(null).subscribe(result => {

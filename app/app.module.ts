@@ -21,11 +21,14 @@ import {DashboardComponent} from "./dashboard/dashboard.component";
 import {PoetsComponent} from "./poets/poets.component";
 import {EventComponent} from "./event/event.component";
 import {NavigationComponent} from "./navigation/navigation.component";
-import {PoetService} from "./poets/poet.service";
-import {NavigationService} from "./navigation/navigation.service";
 import { GroupsComponent } from './groups/groups.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+
+import {PoetService} from "./poets/poet.service";
+
+import {NavigationService} from "./navigation/navigation.service";
 import {TitleService} from "./navigation/title.service";
+import { DialogService } from './dialog.service';
 
 // import {ColorPickerModule} from 'angular4-color-picker';
 
@@ -51,7 +54,8 @@ import {TitleService} from "./navigation/title.service";
     providers: [
         PoetService,
         NavigationService,
-        TitleService
+        TitleService,
+        DialogService
     ],
     bootstrap: [AppComponent]
 })
