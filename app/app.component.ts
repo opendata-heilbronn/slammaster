@@ -1,17 +1,21 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {NavigationService} from "./navigation/navigation.service";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+    projectorWindow = null;
 
+    constructor(private navigation: NavigationService) {}
 
-  projectorWindow = null;
+    startFullscreen() {
+        this.projectorWindow = window.open("projector/index.html");
+    }
 
-  startFullscreen () {
-    this.projectorWindow = window.open("projector/index.html");
-  }
+    openNavigation() {
+        this.navigation.open();
+    }
 }

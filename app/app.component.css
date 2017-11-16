@@ -11,3 +11,7 @@ mat-sidenav-container
 {
     height: 100vh;
 }
+
+app-navigation {
+    height: 100vh;
+}
