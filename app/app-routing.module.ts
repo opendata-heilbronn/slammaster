@@ -29,7 +29,8 @@ const routes: Routes = [
     },
     {
         path: 'groups',
-        component: GroupsComponent
+        component: GroupsComponent,
+        data: {title: 'Gruppen'}
     }
 ];
 

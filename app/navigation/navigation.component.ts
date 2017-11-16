@@ -62,6 +62,5 @@ export class NavigationComponent implements OnInit {
 
     public onLinkClick(link: NavigationItem): void {
         this.navigationService.close();
-        this.titleService.changeTitle(link.text);
     }
 }
