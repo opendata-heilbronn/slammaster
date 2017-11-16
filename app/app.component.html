@@ -1,6 +1,8 @@
 <app-navigation>
     <mat-toolbar color="primary" class="sticky-toolbar">
-        <mat-icon class="example-icon" (click)="openNavigation()">menu</mat-icon>
+        <button mat-icon-button (click)="openNavigation()">
+            <mat-icon class="navigation-button">menu</mat-icon>
+        </button>
         <span class="example-spacer"></span>
 
         <mat-icon matTooltip="Präsentation starten" (click)="startFullscreen()">fullscreen</mat-icon>

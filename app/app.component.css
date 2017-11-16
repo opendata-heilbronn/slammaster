@@ -15,3 +15,7 @@ mat-sidenav-container
 app-navigation {
     height: 100vh;
 }
+
+.navigation-button {
+    cursor: pointer;
+}

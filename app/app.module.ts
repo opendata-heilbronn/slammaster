@@ -13,7 +13,8 @@ import {
     MatSidenavModule,
     MatTableModule,
     MatToolbarModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatButtonModule
 } from "@angular/material";
 import {AppComponent} from "./app.component";
 import {DashboardComponent} from "./dashboard/dashboard.component";
@@ -37,7 +38,7 @@ import {NavigationService} from "./navigation/navigation.service";
         BrowserModule,
         BrowserAnimationsModule,
         MatSidenavModule, MatIconModule, MatTableModule, MatToolbarModule, MatTooltipModule,
-        MatInputModule, MatListModule,
+        MatInputModule, MatListModule, MatButtonModule,
 //    ColorPickerModule,
         HttpClientModule,
         AppRoutingModule

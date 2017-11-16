@@ -23,7 +23,7 @@ export class NavigationComponent implements OnInit {
             ]
         },
         {
-            name: "Konfiguration",
+            name: "Stammdaten",
             items: [
                 {
                     link: '/event',
