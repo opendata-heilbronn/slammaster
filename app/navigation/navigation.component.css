@@ -5,3 +5,9 @@ mat-nav-list {
 mat-sidenav-container {
     height: 100vh;
 }
+
+.active
+{
+    background: #3F51B5;
+    color: white;
+}

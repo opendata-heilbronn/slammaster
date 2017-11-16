@@ -3,7 +3,7 @@
         <mat-nav-list>
             <div *ngFor="let category of links; let lastCategory = last">
                 <h3 mat-subheader>{{category.name}}</h3>
-                <a mat-list-item [routerLink]="link.link" *ngFor="let link of category.items" (click)="closeNavigation()">{{link.text}}</a>
+                <a mat-list-item [routerLink]="link.link" *ngFor="let link of category.items" (click)="closeNavigation()" routerLinkActive="active">{{link.text}}</a>
                 <mat-divider *ngIf="!lastCategory"></mat-divider>
             </div>
         </mat-nav-list>
