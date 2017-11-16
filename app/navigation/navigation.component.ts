@@ -2,6 +2,8 @@ import {Component, OnInit, ViewChild} from "@angular/core";
 import {NavigationCategory} from "./NavigationCategory";
 import {MatSidenav} from "@angular/material";
 import {NavigationService, NavigationState} from "./navigation.service";
+import {TitleService} from "./title.service";
+import {NavigationItem} from "./NavigationItem";
 
 @Component({
     selector: 'app-navigation',
@@ -45,7 +47,7 @@ export class NavigationComponent implements OnInit {
         }
     ];
 
-    constructor(private navigationService: NavigationService) {
+    constructor(private navigationService: NavigationService, private titleService: TitleService) {
     }
 
     ngOnInit() {
@@ -58,7 +60,8 @@ export class NavigationComponent implements OnInit {
         })
     }
 
-    public closeNavigation(): void {
+    public onLinkClick(link: NavigationItem): void {
         this.navigationService.close();
+        this.titleService.changeTitle(link.text);
     }
 }

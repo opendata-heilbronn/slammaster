@@ -10,12 +10,4 @@ export class AppComponent {
     projectorWindow = null;
 
     constructor(private navigation: NavigationService) {}
-
-    startFullscreen() {
-        this.projectorWindow = window.open("projector/index.html");
-    }
-
-    openNavigation() {
-        this.navigation.open();
-    }
 }

@@ -1,0 +1,9 @@
+<mat-toolbar color="primary" class="sticky-toolbar">
+  <button mat-icon-button (click)="openNavigation()">
+    <mat-icon class="navigation-button">menu</mat-icon>
+  </button>
+  <h1>{{title.title | async}}</h1>
+  <span class="example-spacer"></span>
+
+  <mat-icon matTooltip="Präsentation starten" (click)="startFullscreen()">fullscreen</mat-icon>
+</mat-toolbar>

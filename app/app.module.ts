@@ -24,6 +24,8 @@ import {NavigationComponent} from "./navigation/navigation.component";
 import {PoetService} from "./poets/poet.service";
 import {NavigationService} from "./navigation/navigation.service";
 import { GroupsComponent } from './groups/groups.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import {TitleService} from "./navigation/title.service";
 
 // import {ColorPickerModule} from 'angular4-color-picker';
 
@@ -34,7 +36,8 @@ import { GroupsComponent } from './groups/groups.component';
         PoetsComponent,
         EventComponent,
         NavigationComponent,
-        GroupsComponent
+        GroupsComponent,
+        ToolbarComponent
     ],
     imports: [
         BrowserModule,
@@ -47,7 +50,8 @@ import { GroupsComponent } from './groups/groups.component';
     ],
     providers: [
         PoetService,
-        NavigationService
+        NavigationService,
+        TitleService
     ],
     bootstrap: [AppComponent]
 })
