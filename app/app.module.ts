@@ -23,6 +23,7 @@ import {EventComponent} from "./event/event.component";
 import {NavigationComponent} from "./navigation/navigation.component";
 import {PoetService} from "./poets/poet.service";
 import {NavigationService} from "./navigation/navigation.service";
+import { GroupsComponent } from './groups/groups.component';
 
 // import {ColorPickerModule} from 'angular4-color-picker';
 
@@ -32,7 +33,8 @@ import {NavigationService} from "./navigation/navigation.service";
         DashboardComponent,
         PoetsComponent,
         EventComponent,
-        NavigationComponent
+        NavigationComponent,
+        GroupsComponent
     ],
     imports: [
         BrowserModule,
