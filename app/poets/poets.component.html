@@ -1,27 +1,23 @@
+<div class="container">
+  <mat-list>
+    <h3 mat-subheader>Poeten</h3>
+    <mat-list-item *ngFor="let poet of poets">
+      <mat-icon mat-list-icon>folder</mat-icon>
+      <h4 mat-line>{{ poet.Name }}</h4>
+      <p mat-line> {{ poet.Slam }} </p>
+    </mat-list-item>
+  </mat-list>
 
-<mat-list>
-  <h3 mat-subheader>Poeten</h3>
-  <mat-list-item *ngFor="let poet of poets">
-    <mat-icon mat-list-icon>folder</mat-icon>
-    <h4 mat-line>{{ poet.Name }}</h4>
-    <p mat-line> {{ poet.Slam }} </p>
-  </mat-list-item>
-</mat-list>
+  <div>
+    <mat-form-field class="cfhn-full-width">
+      <input matInput placeholder="Name des Poeten" value="">
+    </mat-form-field>
 
+    <mat-form-field class="cfhn-full-width">
+      <input matInput placeholder="Slam" value="">
+    </mat-form-field>
 
-
-<form class="cfhn-form">
-
-  <mat-form-field class="cfhn-full-width">
-    <input matInput placeholder="Name des Poeten" value="">
-  </mat-form-field>
-
-  <mat-form-field class="cfhn-full-width">
-    <input matInput placeholder="Slam" value="">
-  </mat-form-field>
-
-  <div class="cfhn-fileuploader">
-    <input type="file" />
+    <button mat-button mat-raised-button color="primary" class="cfhn-file-select" (click)="selectFile()"> Bild auswählen</button>
   </div>
-
-</form>
+  
+</div>

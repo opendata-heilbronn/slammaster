@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { PoetModel } from './poet.model';
 
-import {Subject} from 'rxjs/Subject';
-import {Observable} from 'rxjs/Rx';
+import { Observable } from 'rxjs/Rx';
 
 @Injectable()
 export class PoetService {
