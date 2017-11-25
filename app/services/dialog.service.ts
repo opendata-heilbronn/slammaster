@@ -8,7 +8,7 @@ export class DialogService {
 
   private dialog :any = electron.remote.dialog;
 
-  showOpenDialog(properties:any) :any {
+  showOpenDialog(properties:any) :any[] {
     return this.dialog.showOpenDialog(properties);
   }
 

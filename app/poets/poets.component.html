@@ -1,23 +1,37 @@
 <div class="container">
-  <mat-list>
-    <h3 mat-subheader>Poeten</h3>
-    <mat-list-item *ngFor="let poet of poets">
-      <mat-icon mat-list-icon>folder</mat-icon>
-      <h4 mat-line>{{ poet.Name }}</h4>
-      <p mat-line> {{ poet.Slam }} </p>
-    </mat-list-item>
-  </mat-list>
+    <mat-list>
+        <h3 mat-subheader>
+            <button mat-button mat-raised-button color="primary" (click)="addPoet()" class="cfhn-add-poet">Poet hinzufügen</button>
+        </h3>
+        <mat-list-item *ngFor="let poet of poets" (click)="selectPoet(poet)">
+            <mat-icon mat-list-icon>folder</mat-icon>
+            <h4 mat-line>{{ poet.Name }}</h4>
+            <p mat-line> {{ poet.Slam }} </p>
+        </mat-list-item>
+    </mat-list>
 
-  <div>
-    <mat-form-field class="cfhn-full-width">
-      <input matInput placeholder="Name des Poeten" value="">
-    </mat-form-field>
+    <div class="cfhn-content">
 
-    <mat-form-field class="cfhn-full-width">
-      <input matInput placeholder="Slam" value="">
-    </mat-form-field>
+        <div class="cfhn-menu cfhn-menu-right">
+            <button mat-icon-button matTooltip="Poet löschen" (click)="deletePoet(selectedPoet)"><mat-icon aria-label="Poet löschen">delete</mat-icon></button>
+            <button mat-icon-button matTooltip="Poet clonen" (click)="clonePoet(selectedPoet)"><mat-icon aria-label="Poet clonen">content_copy</mat-icon></button>
+        </div>
+        
+            
+        <mat-form-field class="cfhn-full-width">
+            <input matInput placeholder="Name des Poeten" [(ngModel)]="selectedPoet.Name">
+        </mat-form-field>
 
-    <button mat-button mat-raised-button color="primary" class="cfhn-file-select" (click)="selectFile()"> Bild auswählen</button>
-  </div>
+        <mat-form-field class="cfhn-full-width">
+            <input matInput placeholder="Slam" [(ngModel)]="selectedPoet.Slam">
+        </mat-form-field>
+
+        <button mat-button mat-raised-button color="primary" class="cfhn-file-select" (click)="selectFile()"> Bild auswählen</button>
+
+        <div class="cfhn-image-container">
+            <img *ngIf="selectedPoet.Image" src="data:image/png;base64,{{ selectedPoet.Image }}" />
+        </div>
+
+    </div>
   
 </div>

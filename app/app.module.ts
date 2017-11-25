@@ -16,6 +16,7 @@ import {
     MatTooltipModule,
     MatButtonModule
 } from "@angular/material";
+import { FormsModule } from '@angular/forms';
 import {AppComponent} from "./app.component";
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {PoetsComponent} from "./poets/poets.component";
@@ -28,7 +29,8 @@ import {PoetService} from "./poets/poet.service";
 
 import {NavigationService} from "./navigation/navigation.service";
 import {TitleService} from "./navigation/title.service";
-import { DialogService } from './dialog.service';
+import { DialogService } from './services/dialog.service';
+import { FsService } from './services/fs.service';
 
 // import {ColorPickerModule} from 'angular4-color-picker';
 
@@ -49,13 +51,15 @@ import { DialogService } from './dialog.service';
         MatInputModule, MatListModule, MatButtonModule,
 //    ColorPickerModule,
         HttpClientModule,
-        AppRoutingModule
+        AppRoutingModule,
+        FormsModule
     ],
     providers: [
         PoetService,
         NavigationService,
         TitleService,
-        DialogService
+        DialogService,
+        FsService
     ],
     bootstrap: [AppComponent]
 })

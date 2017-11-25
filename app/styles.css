@@ -21,27 +21,7 @@ body {
 }
 
 
-/* si-menu */
-.si-menu {
-    position: sticky;
-    top: 0;
-    left: 0;
 
-    background: rgb(255, 255, 255);
-    padding: 5px 0;
-
-}
-
-.si-menu > button {
-    background: rgb(243, 245, 249);
-    border: 1px;
-    border-style: solid;
-    border-color: rgb(218, 220, 224);
-    padding: 5px 10px;
-    width: 160px;
-    margin-right: 10px;
-    cursor: pointer;
-}
 
 
 /* fallback */
@@ -90,3 +70,11 @@ body {
   width: 100%;
 }
 
+.cfhn-menu {
+    padding: 5px;
+}
+
+.cfhn-menu-right {
+    display: flex;
+    flex-flow: row-reverse;
+}

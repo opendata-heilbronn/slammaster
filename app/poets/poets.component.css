@@ -1,12 +1,37 @@
 
 .container {
     display: flex;
+    width: 100%;
+}
+
+.cfhn-content {
+    width: 100%;
+    margin-right: 20px;
 }
 
 mat-list {
     width: 33%;
 }
 
+.cfhn-add-poet {
+    width: 100%;
+}
+
 .cfhn-file-select {
     width: 100%;
+}
+
+.cfhn-image-container {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    padding: 20px;
+}
+.cfhn-image-container img {
+    max-width: 400px;
+    max-height: 400px;
+}
+
+mat-list-item {
+    cursor: pointer;
 }

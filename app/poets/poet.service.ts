@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { PoetModel } from './poet.model';
 
+import { Guid } from './../guid';
 import { Observable } from 'rxjs/Rx';
 
 @Injectable()
@@ -17,12 +18,16 @@ export class PoetService {
   constructor() {
     this.sampleData = [
       {
+        Id: Guid.newGuid(),
         Name: "Gandalf",
-        Slam: "White Wizard Poetry"
+        Slam: "White Wizard Poetry",
+        Image: null
       },
       {
+        Id: Guid.newGuid(),
         Name: "Frodo Baggins",
-        Slam: "Hobbit Slam"
+        Slam: "Hobbit Slam",
+        Image: null
       }
     ]
   }
