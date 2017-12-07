@@ -1,0 +1,9 @@
+.active, .active:hover, .active:active, .active:focus
+{
+    background: #3F51B5;
+    color: white;
+}
+
+.container-fluid {
+    margin: 8px 0;
+}

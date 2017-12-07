@@ -5,6 +5,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {PoetsComponent} from './poets/poets.component';
 import {EventComponent} from './event/event.component';
 import {GroupsComponent} from "./groups/groups.component";
+import { GroupViewComponent } from './groups/group-view/group-view.component';
 
 const routes: Routes = [
     {
@@ -30,7 +31,11 @@ const routes: Routes = [
     {
         path: 'groups',
         component: GroupsComponent,
-        data: {title: 'Gruppen'}
+        data: {title: 'Gruppen'},
+        children: [{
+            path: ':groupId',
+            component: GroupViewComponent
+        }]
     }
 ];
 

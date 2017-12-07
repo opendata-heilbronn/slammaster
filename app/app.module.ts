@@ -32,6 +32,8 @@ import {TitleService} from "./navigation/title.service";
 import { DialogService } from './services/dialog.service';
 import { FsService } from './services/fs.service';
 import { GroupService } from "./repositories/group.service";
+import { AddGroupComponent } from './groups/add-group/add-group.component';
+import { GroupViewComponent } from './groups/group-view/group-view.component';
 import {ColorPickerModule} from "ngx-color-picker";
 
 // import {ColorPickerModule} from 'angular4-color-picker';
@@ -44,7 +46,9 @@ import {ColorPickerModule} from "ngx-color-picker";
         EventComponent,
         NavigationComponent,
         GroupsComponent,
-        ToolbarComponent
+        ToolbarComponent,
+        AddGroupComponent,
+        GroupViewComponent
     ],
     imports: [
         BrowserModule,

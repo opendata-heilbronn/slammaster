@@ -1,0 +1,8 @@
+<div>
+    <button *ngIf="state === 'button'" mat-button mat-raised-button color="primary" (click)="toFormState()">Gruppe hinzufügen</button>
+    <form *ngIf="state === 'form'">
+        <mat-form-field>
+            <input matInput placeholder="Gruppenname" autofocus (keyup)="onKey($event)">
+        </mat-form-field>
+    </form>
+</div>
