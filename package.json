@@ -24,6 +24,8 @@
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/platform-server": "^5.0.0",
     "@angular/router": "^5.0.0",
+    "angular4-color-picker": "^1.4.2",
+    "bootstrap": "^4.0.0-beta.2",
     "core-js": "^2.4.1",
     "dotenv": "^4.0.0",
     "electron": "^1.7.9",
