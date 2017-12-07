@@ -24,11 +24,11 @@
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/platform-server": "^5.0.0",
     "@angular/router": "^5.0.0",
-    "angular4-color-picker": "^1.4.2",
     "core-js": "^2.4.1",
     "dotenv": "^4.0.0",
     "electron": "^1.7.9",
     "hammerjs": "^2.0.8",
+    "ngx-color-picker": "^5.0.5",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
   },

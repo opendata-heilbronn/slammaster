@@ -32,6 +32,7 @@ import {TitleService} from "./navigation/title.service";
 import { DialogService } from './services/dialog.service';
 import { FsService } from './services/fs.service';
 import { GroupService } from "./repositories/group.service";
+import {ColorPickerModule} from "ngx-color-picker";
 
 // import {ColorPickerModule} from 'angular4-color-picker';
 
@@ -50,6 +51,7 @@ import { GroupService } from "./repositories/group.service";
         BrowserAnimationsModule,
         MatSidenavModule, MatIconModule, MatTableModule, MatToolbarModule, MatTooltipModule,
         MatInputModule, MatListModule, MatButtonModule,
+        ColorPickerModule,
 //    ColorPickerModule,
         HttpClientModule,
         AppRoutingModule,
