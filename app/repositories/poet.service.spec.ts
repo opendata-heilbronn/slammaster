@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { PoetServiceService } from './poet-service.service';
+import { PoetService } from './poet.service';
 
 describe('PoetServiceService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [PoetServiceService]
+      providers: [PoetService]
     });
   });
 
-  it('should be created', inject([PoetServiceService], (service: PoetServiceService) => {
+  it('should be created', inject([PoetService], (service: PoetService) => {
     expect(service).toBeTruthy();
   }));
 });

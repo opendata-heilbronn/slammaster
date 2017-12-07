@@ -9,7 +9,7 @@ import {GroupsComponent} from "./groups/groups.component";
 const routes: Routes = [
     {
         path: '',
-        redirectTo: '/poets',
+        redirectTo: '/groups',
         pathMatch: 'full'
     },
     {

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { PoetModel } from './poet.model';
+import { PoetModel } from './../models/poet.model';
 
 import { Guid } from './../guid';
 import { Observable } from 'rxjs/Rx';

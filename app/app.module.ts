@@ -25,12 +25,13 @@ import {NavigationComponent} from "./navigation/navigation.component";
 import { GroupsComponent } from './groups/groups.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 
-import {PoetService} from "./poets/poet.service";
+import {PoetService} from "./repositories/poet.service";
 
 import {NavigationService} from "./navigation/navigation.service";
 import {TitleService} from "./navigation/title.service";
 import { DialogService } from './services/dialog.service';
 import { FsService } from './services/fs.service';
+import { GroupService } from "./repositories/group.service";
 
 // import {ColorPickerModule} from 'angular4-color-picker';
 
@@ -56,6 +57,7 @@ import { FsService } from './services/fs.service';
     ],
     providers: [
         PoetService,
+        GroupService,
         NavigationService,
         TitleService,
         DialogService,

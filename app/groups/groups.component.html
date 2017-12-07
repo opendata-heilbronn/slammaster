@@ -1,3 +1,21 @@
-<p>
-  groups works!
-</p>
+<div class="container">
+    <mat-list>
+        <h3 mat-subheader>
+            <button mat-button mat-raised-button color="primary" (click)="addPoet()" class="cfhn-add-poet">Gruppe hinzufügen</button>
+        </h3>
+        <mat-list-item *ngFor="let group of groups" (click)="selectPoet(poet)">
+            <mat-icon mat-list-icon>folder</mat-icon>
+            <h4 mat-line>{{ group.Name }}</h4>
+        </mat-list-item>
+    </mat-list>
+
+    <div class="cfhn-content">
+
+        <div class="cfhn-menu cfhn-menu-right">
+            <button mat-icon-button matTooltip="Poet löschen" (click)="deletePoet(selectedPoet)"><mat-icon aria-label="Poet löschen">delete</mat-icon></button>
+            <button mat-icon-button matTooltip="Poet clonen" (click)="clonePoet(selectedPoet)"><mat-icon aria-label="Poet clonen">content_copy</mat-icon></button>
+        </div>
+
+    </div>
+  
+</div>
