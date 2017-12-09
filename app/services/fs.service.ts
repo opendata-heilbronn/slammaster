@@ -7,6 +7,8 @@ export class FsService {
 
     private fs: any = fs;
 
+    private projectPath: string;
+
     readFileSync(path:any) :any {
         return this.fs.readFileSync(path);
     }

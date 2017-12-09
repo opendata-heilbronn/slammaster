@@ -30,7 +30,7 @@ import { GroupService } from "./repositories/group.service";
 
 import { DialogService } from './services/dialog.service';
 import { FsService } from './services/fs.service';
-import { StorageService } from './services/storage.service';
+import { ExportService } from './services/export.service';
 
 import { NavigationService } from "./navigation/navigation.service";
 import { TitleService } from "./navigation/title.service";
@@ -71,6 +71,7 @@ import { ColorPickerModule } from "ngx-color-picker";
         TitleService,
         DialogService,
         FsService,
+        ExportService
         GroupResolver,
         FsService,
         StorageService

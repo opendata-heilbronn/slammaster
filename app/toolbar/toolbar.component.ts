@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationService } from '../navigation/navigation.service';
 import { TitleService } from '../navigation/title.service';
-import { StorageService } from '../services/storage.service';
+import { ExportService } from '../services/export.service';
 
 @Component({
     selector: 'app-toolbar',
@@ -14,7 +14,7 @@ export class ToolbarComponent implements OnInit {
     constructor(
         private navigation: NavigationService, 
         private title: TitleService,
-        private storageService: StorageService) { }
+        private storageService: ExportService) { }
 
     ngOnInit() {
     }
@@ -24,7 +24,7 @@ export class ToolbarComponent implements OnInit {
     }
 
     save(): void {
-        this.storageService.save();
+        this.storageService.export([]);
     }
 
     openNavigation() {
