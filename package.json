@@ -6,6 +6,8 @@
   "scripts": {
     "build": "ng build --base-href '' && npm run copy:dist",
     "start": "electron .",
+    "start:dev": "cross-env PACKAGE=false HOST=http://localhost:4200 npm run start:dev-impl",
+    "start:dev-impl": "concurrently \"ng serve\" \"npm run copy:dist && await tcp localhost:4200 && npm run start\"",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "copy:dist": "node build/copy-dist.js"
@@ -43,8 +45,9 @@
     "@types/node": "^6.0.92",
     "angular-tslint-rules": "^1.1.0",
     "codelyzer": "~3.2.0",
-    "concurrently": "^3.5.0",
+    "concurrently": "^3.5.1",
     "copy": "^0.3.1",
+    "cross-env": "^5.1.1",
     "jasmine-core": "^2.8.0",
     "karma": "^1.7.1",
     "karma-chrome-launcher": "^2.2.0",
@@ -54,6 +57,7 @@
     "make-dir": "^1.1.0",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
-    "typescript": "^2.4.0"
+    "typescript": "^2.4.0",
+    "wait-cli": "^1.0.0"
   }
 }
