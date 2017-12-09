@@ -10,4 +10,7 @@
  */
 
 window.fs = require('fs');
-window.electron = require('electron');
+window.node_electron = require('electron');
+window.node_temp = require('temp');
+window.node_os = require('os');
+window.archiver = require('archiver');

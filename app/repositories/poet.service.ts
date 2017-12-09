@@ -11,7 +11,7 @@ export class PoetService {
 
 
   Read(options:any) : Observable<PoetModel[]> {
-      return Observable.of(this.sampleData);
+      return Observable.of({...this.sampleData});
   }
 
 

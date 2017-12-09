@@ -25,16 +25,18 @@ import {NavigationComponent} from "./navigation/navigation.component";
 import { GroupsComponent } from './groups/groups.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 
-import {PoetService} from "./repositories/poet.service";
+import { PoetService } from "./repositories/poet.service";
+import { GroupService } from "./repositories/group.service";
 
-import {NavigationService} from "./navigation/navigation.service";
-import {TitleService} from "./navigation/title.service";
 import { DialogService } from './services/dialog.service';
 import { FsService } from './services/fs.service';
-import { GroupService } from "./repositories/group.service";
+import { StorageService } from './services/storage.service';
+
+import { NavigationService } from "./navigation/navigation.service";
+import { TitleService } from "./navigation/title.service";
 import { AddGroupComponent } from './groups/add-group/add-group.component';
 import { GroupViewComponent } from './groups/group-view/group-view.component';
-import {ColorPickerModule} from "ngx-color-picker";
+import { ColorPickerModule } from "ngx-color-picker";
 
 // import {ColorPickerModule} from 'angular4-color-picker';
 
@@ -67,7 +69,8 @@ import {ColorPickerModule} from "ngx-color-picker";
         NavigationService,
         TitleService,
         DialogService,
-        FsService
+        FsService,
+        StorageService
     ],
     bootstrap: [AppComponent]
 })

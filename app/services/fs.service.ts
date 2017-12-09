@@ -5,12 +5,12 @@ declare var fs;
 @Injectable()
 export class FsService {
 
-  private fs: any = fs;
+    private fs: any = fs;
 
-  readFileSync(path:any) :any {
-    return this.fs.readFileSync(path);
-  }
+    readFileSync(path:any) :any {
+        return this.fs.readFileSync(path);
+    }
 
-  constructor() { }
+    constructor() { }
 
 }
