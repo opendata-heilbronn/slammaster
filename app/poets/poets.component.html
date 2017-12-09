@@ -16,8 +16,8 @@
             <button mat-icon-button matTooltip="Poet löschen" (click)="deletePoet(selectedPoet)"><mat-icon aria-label="Poet löschen">delete</mat-icon></button>
             <button mat-icon-button matTooltip="Poet clonen" (click)="clonePoet(selectedPoet)"><mat-icon aria-label="Poet clonen">content_copy</mat-icon></button>
         </div>
-        
-            
+
+
         <mat-form-field class="cfhn-full-width">
             <input matInput placeholder="Name des Poeten" [(ngModel)]="selectedPoet.Name">
         </mat-form-field>
@@ -29,9 +29,9 @@
         <button mat-button mat-raised-button color="primary" class="cfhn-file-select" (click)="selectFile()"> Bild auswählen</button>
 
         <div class="cfhn-image-container">
-            <img *ngIf="selectedPoet.Image" src="data:image/png;base64,{{ selectedPoet.Image }}" />
+            <img *ngIf="selectedPoet.Image" [src]="selectedPoet.Image" />
         </div>
 
     </div>
-  
+
 </div>

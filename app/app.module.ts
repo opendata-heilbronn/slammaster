@@ -36,6 +36,8 @@ import { NavigationService } from "./navigation/navigation.service";
 import { TitleService } from "./navigation/title.service";
 import { AddGroupComponent } from './groups/add-group/add-group.component';
 import { GroupViewComponent } from './groups/group-view/group-view.component';
+import {ColorPickerModule} from "ngx-color-picker";
+import { GroupResolver } from './groups/group.resolver';
 import { ColorPickerModule } from "ngx-color-picker";
 
 // import {ColorPickerModule} from 'angular4-color-picker';
@@ -69,6 +71,8 @@ import { ColorPickerModule } from "ngx-color-picker";
         NavigationService,
         TitleService,
         DialogService,
+        FsService,
+        GroupResolver,
         FsService,
         StorageService
     ],

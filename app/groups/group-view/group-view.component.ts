@@ -1,26 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { GroupService } from '../../repositories/group.service';
 import { GroupModel } from '../../models/group.model';
 import { Observable } from 'rxjs/Observable';
+import { AbstractControl, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-group-view',
   templateUrl: './group-view.component.html',
   styleUrls: ['./group-view.component.css']
 })
-export class GroupViewComponent implements OnInit {
+export class GroupViewComponent {
+    group: GroupModel;
 
-    group: Observable<GroupModel>;
+    @ViewChild(NgModel)
+    model: NgModel;
 
-    constructor(private activatedRoute: ActivatedRoute, private groupService: GroupService) {}
+    constructor(private activatedRoute: ActivatedRoute, private groupService: GroupService, private router: Router) {}
 
     ngOnInit() {
-        this.group = this.activatedRoute.params
-            .do(p => console.log('params', p))
-            .map(params => params.groupId)
-            .flatMap(groupId => groupId ? this.groupService.ReadGroup(groupId) : Observable.of(null))
-            .do(group => console.log(group))
-            .catch(err => Observable.of(null));
+        this.activatedRoute.data.subscribe(({group}) => this.group = group);
+    }
+
+    save() {
+        this.groupService.SaveGroup(this.group);
+        this.model.control.markAsPristine();
     }
 }

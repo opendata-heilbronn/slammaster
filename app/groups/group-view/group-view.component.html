@@ -1,1 +1,17 @@
-<h1>{{(group | async)?.Name}}</h1>
+<h1 class="group-name">Gruppe bearbeiten</h1>
+<mat-form-field>
+    <input matInput type="text" placeholder="Gruppenname" [(ngModel)]="group.Name" name="Name"
+           #groupNameInput="ngModel">
+</mat-form-field>
+<button mat-icon-button matTooltip="Speichern" [disabled]="!groupNameInput.dirty" (click)="save()">
+    <mat-icon aria-label="Speichern">save</mat-icon>
+</button>
+
+<h2 class="poets-header">Gruppenzuordnung</h2>
+<mat-list>
+    <mat-list-item *ngFor="let poet of group.Poets">
+        <img matListAvatar [src]="poet.Image">
+        <h3 matLine>{{poet.Name}}</h3>
+        <p matLine>{{poet.Slam}}</p>
+    </mat-list-item>
+</mat-list>

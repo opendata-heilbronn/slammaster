@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {GroupService} from '../../repositories/group.service';
 import {MatInput} from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-add-group',
@@ -13,7 +14,7 @@ export class AddGroupComponent implements OnInit {
     @ViewChild(MatInput)
     private input: MatInput;
 
-    constructor(private groupService: GroupService) {}
+    constructor(private groupService: GroupService, private router: Router) {}
 
     ngOnInit() {
         this.state = 'button';
@@ -26,7 +27,10 @@ export class AddGroupComponent implements OnInit {
     onKey($event: any) {
         if ($event.keyCode === 13) {
             const groupName = this.input.value;
-            this.groupService.CreateGroup(groupName).subscribe(group => this.state = 'button');
+            this.groupService.CreateGroup(groupName).subscribe(group => {
+                this.state = 'button';
+                this.router.navigate(['/groups', group.Id]);
+            });
         } else if ($event.keyCode === 27) {
             this.state = 'button';
         }

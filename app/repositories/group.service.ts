@@ -18,7 +18,7 @@ export class GroupService {
 
     constructor(private poetService: PoetService) {
         this.generateSampleData().subscribe(() => {
-            this.subject = new BehaviorSubject(this.data);
+            this.subject = new BehaviorSubject([...this.data]);
         });
     }
 
@@ -28,18 +28,22 @@ export class GroupService {
 
     ReadGroup(id: string): Observable<GroupModel> {
         const group = this.data.find(g => g.Id === id);
-        return group ? Observable.of({...group}) : Observable.throw(new Error('Group not found'));
+        return group ? Observable.of({...group}) : Observable.of(null);
     }
 
-    AddGroup(group: GroupModel): void {
-        this.data.push(group);
+    SaveGroup(group: GroupModel): void {
+        const index = this.data.findIndex(g => g.Id === group.Id);
+        if (index >= 0) {
+            this.data[index] = group;
+            this.republishChanges();
+        }
     }
 
     AddPoet(id: string, poet: PoetModel): Observable<GroupModel> {
         const group = this.data.find(g => g.Id === id);
         group.Poets.push(poet);
+        this.republishChanges();
         return Observable.of(group);
-
     }
 
     CreateGroup(name: string): Observable<GroupModel> {
@@ -48,7 +52,12 @@ export class GroupService {
             Name: name,
             Poets: []
         });
+        this.republishChanges();
         return Observable.of(this.data[this.data.length - 1]);
+    }
+
+    private republishChanges() {
+        this.subject.next([...this.data]);
     }
 
     private generateSampleData() {

@@ -1,11 +1,12 @@
-import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
-import {DashboardComponent} from './dashboard/dashboard.component';
-import {PoetsComponent} from './poets/poets.component';
-import {EventComponent} from './event/event.component';
-import {GroupsComponent} from "./groups/groups.component";
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { PoetsComponent } from './poets/poets.component';
+import { EventComponent } from './event/event.component';
+import { GroupsComponent } from './groups/groups.component';
 import { GroupViewComponent } from './groups/group-view/group-view.component';
+import { GroupResolver } from './groups/group.resolver';
 
 const routes: Routes = [
     {
@@ -32,10 +33,15 @@ const routes: Routes = [
         path: 'groups',
         component: GroupsComponent,
         data: {title: 'Gruppen'},
-        children: [{
-            path: ':groupId',
-            component: GroupViewComponent
-        }]
+        children: [
+            {
+                path: ':groupId',
+                component: GroupViewComponent,
+                resolve: {
+                    group: GroupResolver
+                }
+            }
+        ]
     }
 ];
 
