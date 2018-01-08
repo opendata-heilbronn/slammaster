@@ -1,0 +1,14 @@
+<div class="dashboard-container">
+  <div class="slides">
+    <div class="slide"
+         [class.selected]="slide.$selected"      
+         *ngFor="let slide of slides">
+      <templates [s]="slide" ></templates>
+      <div class="overlay" (click)="select(slide)"></div>
+    </div>
+  </div>
+
+  <div class="slide-settings">
+
+  </div>
+</div>

@@ -5,8 +5,8 @@ const makeDir = require('make-dir');
 (async function() {
 	await makeDir('dist/projector');
 	await Promise.all([
-		copy('main.js', 'dist'),
-		copy('app/projector/*', 'dist/projector')
+		//copy('main.js', 'dist'),
+		//copy('app/projector/*', 'dist/projector')
 	]);
 })();
 

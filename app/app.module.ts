@@ -16,67 +16,38 @@ import {
     MatTooltipModule,
     MatButtonModule
 } from "@angular/material";
-import { FormsModule } from '@angular/forms';
-import {AppComponent} from "./app.component";
-import {DashboardComponent} from "./dashboard/dashboard.component";
-import {PoetsComponent} from "./poets/poets.component";
-import {EventComponent} from "./event/event.component";
-import {NavigationComponent} from "./navigation/navigation.component";
-import { GroupsComponent } from './groups/groups.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
-
-import { PoetService } from "./repositories/poet.service";
-import { GroupService } from "./repositories/group.service";
-
-import { DialogService } from './services/dialog.service';
-import { FsService } from './services/fs.service';
-import { ExportService } from './services/export.service';
-
-import { NavigationService } from "./navigation/navigation.service";
-import { TitleService } from "./navigation/title.service";
-import { AddGroupComponent } from './groups/add-group/add-group.component';
-import { GroupViewComponent } from './groups/group-view/group-view.component';
-import { GroupResolver } from './groups/group.resolver';
 import { ColorPickerModule } from "ngx-color-picker";
+
+import { FormsModule } from '@angular/forms';
+import { AppComponent } from "./app.component";
+import { TemplatesComponent } from './templates/templates.component';
+
+import { AppCommonModule } from './common/common.module';
+import { AdminModule } from './admin/admin.module';
+import { ProjectorModule } from './projector/projector.module';
+import { KdkTemplatesModule } from './templates/templates-kdk/templates-kdk.module';
 
 // import {ColorPickerModule} from 'angular4-color-picker';
 
 @NgModule({
     declarations: [
-        AppComponent,
-        DashboardComponent,
-        PoetsComponent,
-        EventComponent,
-        NavigationComponent,
-        GroupsComponent,
-        ToolbarComponent,
-        AddGroupComponent,
-        GroupViewComponent
+        AppComponent
     ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        MatSidenavModule, MatIconModule, MatTableModule, MatToolbarModule, MatTooltipModule,
-        MatInputModule, MatListModule, MatButtonModule,
-        ColorPickerModule,
-//    ColorPickerModule,
         HttpClientModule,
         AppRoutingModule,
-        FormsModule
+
+        AppCommonModule,
+        AdminModule,
+        ProjectorModule
     ],
     providers: [
-        PoetService,
-        GroupService,
-        NavigationService,
-        TitleService,
-        DialogService,
-        FsService,
-        ExportService
-        GroupResolver,
-        FsService,
-        StorageService
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [
+        AppComponent
+    ]
 })
 export class AppModule {
 

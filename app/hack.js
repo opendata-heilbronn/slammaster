@@ -8,9 +8,13 @@
  * Please try to keep everything clean! Do not add anything if there are other
  * (may be a bit more slow/work-intensive) solutions!
  */
+try {
+    window.fs = require('fs');
+    window.node_electron = require('electron');
+    window.node_temp = require('temp');
+    window.node_os = require('os');
+    window.archiver = require('archiver');
+} catch (err) {
+    console.warn('require not available');
+}
 
-window.fs = require('fs');
-window.node_electron = require('electron');
-window.node_temp = require('temp');
-window.node_os = require('os');
-window.archiver = require('archiver');

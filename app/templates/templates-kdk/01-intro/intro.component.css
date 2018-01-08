@@ -1,0 +1,44 @@
+
+
+.intro-container {
+    background: #1d1d1b;
+    color: #ffffff;
+    overflow: hidden;
+
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 15% 0;
+}
+
+.intro-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 70%;
+
+    margin-top: -22%;
+    margin-left: -20%;
+}
+
+
+.intro-container svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 30%;
+
+    margin-top: -12%;
+    margin-left: -35%;
+}
+
+.intro-container img,
+.intro-container svg {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.intro-container .visible {
+    opacity: 1;
+}

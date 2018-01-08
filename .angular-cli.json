@@ -6,10 +6,11 @@
   "apps": [
     {
       "root": "app",
-      "outDir": "dist/app",
+      "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        "electron-main.js"
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -19,7 +20,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/bootstrap/dist/css/bootstrap-grid.min.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.css",
         "styles.css"
       ],
       "scripts": [
@@ -61,6 +62,7 @@
     "class": {
       "spec": false
     },
-    "component": {}
+    "component": {
+    }
   }
 }
